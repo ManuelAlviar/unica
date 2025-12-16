@@ -1568,4 +1568,62 @@
         transition-duration: 0.01ms !important;
       }
     }
+ /* =========================================
+   BOTÓN AULA VIRTUAL (PEGADO A LA DERECHA)
+   ========================================= */
+
+.btn-aula {
+  /* *** CLAVE PARA EMPUJARLO A LA DERECHA EN UN FLEX CONTAINER *** */
+  margin-left: auto; 
+  /* ************************************************************* */
+  
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  
+  /* Estilos visuales */
+  background-color: rgba(255, 255, 255, 0.15); 
+  padding: 5px 15px 5px 5px; 
+  border-radius: 50px; 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-right: 15px; /* Separación del menú hamburguesa */
+}
+
+/* Estilo del texto */
+.btn-aula span {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Estilo del logo pequeño */
+.btn-aula img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.btn-aula:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btn-aula:hover span {
+  color: var(--rojo); /* El texto se vuelve rojo de la marca */
+}
+
+/* Ocultar en dispositivos móviles (para no interferir con el menú) */
+@media (max-width: 900px) {
+  .btn-aula {
+    display: none;
+  }
+          }
+
   
